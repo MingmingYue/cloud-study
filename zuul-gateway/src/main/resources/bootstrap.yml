@@ -1,0 +1,16 @@
+spring:
+  profiles:
+    active: test
+  application:
+    name: zuul-gateway
+  cloud:
+    config:
+      failFast: true
+      discovery:
+        enabled: true
+        serviceId: config-server
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://10.10.10.77:8761/eureka/
