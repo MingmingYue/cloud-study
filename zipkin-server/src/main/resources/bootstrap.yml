@@ -1,9 +1,16 @@
 spring:
   application:
-    name: micoserice-zipkin-server
+    name: zipkin-server
+  cloud:
+    config:
+      name: zipkin
+      discovery:
+        service-id: config
+
 server:
   port: 9411
 eureka:
   client:
     serviceUrl:
       defaultZone: http://10.10.10.77:8761/eureka/
+
