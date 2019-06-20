@@ -9,8 +9,8 @@ spring:
         git:
           uri: https://github.com/MingmingYue/cloud-study
           searchPaths: config-repository
-          username:
-          password:
+#          username:
+#          password:
       label: master
 
 eureka:

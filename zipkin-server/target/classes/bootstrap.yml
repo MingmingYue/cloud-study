@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: micoserice-zipkin-server
+server:
+  port: 9411
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://10.10.10.77:8761/eureka/

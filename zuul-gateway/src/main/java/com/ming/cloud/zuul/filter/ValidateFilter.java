@@ -1,6 +1,5 @@
 package com.ming.cloud.zuul.filter;
 
-import com.netflix.zuul.exception.ZuulException;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.cloud.netflix.zuul.filters.support.FilterConstants;
 import org.springframework.stereotype.Component;
@@ -32,12 +31,12 @@ public class ValidateFilter extends ZuulFilter {
     }
 
     @Override
-    public Object run() throws ZuulException {
+    public Object run() {
         RequestContext requestContext = RequestContext.getCurrentContext();
         HttpServletRequest request = requestContext.getRequest();
 
         String uri = request.getRequestURI();
-        log.info("[ValidateFilter:run] request url: "+uri);
+        log.info("[ValidateFilter:run] request url: " + uri);
 
         return requestContext;
     }

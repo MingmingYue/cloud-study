@@ -1,4 +1,4 @@
-package com.ming.cloud.feignhystrix.entity;
+package com.ming.cloud.zuul.entity;
 
 import lombok.Builder;
 import lombok.Getter;
