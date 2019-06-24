@@ -1,12 +1,11 @@
 spring:
   application:
     name: zipkin-server
-  cloud:
-    config:
-      name: zipkin
-      discovery:
-        service-id: config
-
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1.0
 server:
   port: 9411
 eureka:
@@ -14,3 +13,16 @@ eureka:
     serviceUrl:
       defaultZone: http://10.10.10.77:8761/eureka/
 
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+  metrics:
+    web:
+      server:
+        auto-time-requests: false

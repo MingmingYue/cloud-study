@@ -8,8 +8,8 @@ import zipkin2.server.internal.EnableZipkinServer;
 /**
  * Created by 2019-06-20
  */
-@EnableZipkinServer
 @SpringBootApplication
+@EnableZipkinServer
 @EnableEurekaClient
 public class ZipKinApplication {
 
