@@ -1,0 +1,55 @@
+server:
+  port: 8895
+
+spring:
+  profiles: test
+  application:
+    name: zuul-gateway
+  zipkin:
+    baseUrl: http://10.10.10.77:9411/
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      probability: 1.0
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.10.10.77:8761/eureka
+
+ribbon:
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
+  eureka:
+    enabled: true
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 30000
+        readTimeout: 30000
+
+zuul:
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 30000
+  routes:
+    users:
+      path: /user/**
+      sensitiveHeaders: "*"
+      serviceId: user
+      stripPrefix: false
+
+  add-proxy-headers: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+secret:
+  map: "{127: 'asdfg', 256: 'qwert'}"

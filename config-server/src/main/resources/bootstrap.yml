@@ -8,9 +8,10 @@ spring:
       server:
         git:
           uri: https://github.com/MingmingYue/cloud-study
-          searchPaths: config-repository
-#          username:
-#          password:
+          searchPaths: config-repository/{application}
+          force-pull: true
+      #          username:
+      #          password:
       label: master
 
 eureka:
