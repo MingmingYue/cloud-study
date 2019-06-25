@@ -8,7 +8,7 @@ spring:
       type: web
   sleuth:
     sampler:
-      probability: 1.0
+      probability: 0.1
 
 ribbon:
   ReadTimeout: 10000
