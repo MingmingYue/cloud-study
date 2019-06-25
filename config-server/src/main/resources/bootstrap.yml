@@ -8,7 +8,7 @@ spring:
       server:
         git:
           uri: https://github.com/MingmingYue/cloud-study
-          searchPaths: config-repository/{application}
+          searchPaths: config-repository/{application}/
           force-pull: true
       #          username:
       #          password:

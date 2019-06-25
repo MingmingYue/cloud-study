@@ -1,4 +1,7 @@
 spring:
+  profiles: test
+  application:
+    name: user
   zipkin:
     baseUrl: http://10.10.10.77:9411/
     sender:

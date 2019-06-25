@@ -1,10 +1,4 @@
-server:
-  port: 8895
-
 spring:
-  profiles: test
-  application:
-    name: zuul-gateway
   zipkin:
     baseUrl: http://10.10.10.77:9411/
     sender:
@@ -12,11 +6,6 @@ spring:
   sleuth:
     sampler:
       probability: 1.0
-
-eureka:
-  client:
-    service-url:
-      defaultZone: http://10.10.10.77:8761/eureka
 
 ribbon:
   ReadTimeout: 30000

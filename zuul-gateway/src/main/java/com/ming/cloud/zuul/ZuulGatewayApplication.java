@@ -14,6 +14,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableZuulProxy
 @EnableFeignClients
 public class ZuulGatewayApplication {
+
     public static void main(String[] args) {
         SpringApplication.run(ZuulGatewayApplication.class, args);
     }
