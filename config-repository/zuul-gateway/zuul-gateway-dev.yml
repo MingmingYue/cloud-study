@@ -8,8 +8,8 @@ spring:
       probability: 1.0
 
 ribbon:
-  ReadTimeout: 30000
-  ConnectTimeout: 30000
+  ReadTimeout: 10000
+  ConnectTimeout: 15000
   eureka:
     enabled: true
 
