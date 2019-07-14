@@ -1,5 +1,5 @@
 spring:
-  profiles: test
+  profiles: dev
   application:
     name: user
   zipkin:

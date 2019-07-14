@@ -1,0 +1,47 @@
+spring:
+  profiles: test
+  application:
+    name: order
+  zipkin:
+    baseUrl: http://10.10.10.77:9411/
+    sender:
+      type: web
+  sleuth:
+    sampler:
+      probability: 1.0
+
+ribbon:
+  ReadTimeout: 10000
+  ConnectTimeout: 15000
+  eureka:
+    enabled: true
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 30000
+        readTimeout: 30000
+
+zuul:
+  host:
+    socket-timeout-millis: 60000
+    connect-timeout-millis: 30000
+  routes:
+    users:
+      path: /order/**
+      sensitiveHeaders: "*"
+      serviceId: order
+      stripPrefix: false
+
+add-proxy-headers: true
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+
+secret:
+  map: "{127: 'asdfg', 256: 'qwert'}"

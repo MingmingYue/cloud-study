@@ -13,6 +13,7 @@
         <module>config-server</module>
         <module>zipkin-server</module>
         <module>user-server</module>
+        <module>order-server</module>
     </modules>
     <packaging>pom</packaging>
 
