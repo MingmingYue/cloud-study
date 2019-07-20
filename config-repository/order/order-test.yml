@@ -9,6 +9,26 @@ spring:
   sleuth:
     sampler:
       probability: 1.0
+  datasource:
+    druid:
+      name: druid-dev
+      url: jdbc:mysql://127.0.0.1:3306/statistics?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true&useOldAliasMetadataBehavior=true&serverTimezone=GMT
+      username: root
+      password: password
+      driver-class-name: com.mysql.jdbc.Driver
+      filters: stat
+      max-active: 20
+      initial-size: 1
+      max-wait: 60000
+      min-idle: 1
+      time-between-eviction-runs-millis: 60000
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-on-borrow: false
+      test-on-return: false
+      test-while-idle: true
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
 
 ribbon:
   ReadTimeout: 10000
