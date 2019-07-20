@@ -12,7 +12,9 @@ import org.springframework.web.bind.annotation.*;
  */
 @Compensable(interfaceClass = OrderService.class, cancellableKey = "orderService")
 @RestController
-public class AccountController {
+@RequestMapping(value = "/order")
+public class OrderController {
+
     @Autowired
     private JdbcTemplate jdbcTemplate;
 

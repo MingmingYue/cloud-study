@@ -30,6 +30,11 @@ zuul:
       sensitiveHeaders: "*"
       serviceId: user
       stripPrefix: false
+    order:
+      path: /order/**
+      sensitiveHeaders: "*"
+      serviceId: order
+      stripPrefix: false
 
   add-proxy-headers: true
 hystrix:

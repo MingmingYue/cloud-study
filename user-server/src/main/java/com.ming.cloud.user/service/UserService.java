@@ -8,4 +8,6 @@ import com.ming.cloud.user.entity.User;
 public interface UserService {
 
     User getUserById(int id);
+
+    void transfer(String sourceAcctId, String targetAcctId, double amount);
 }
