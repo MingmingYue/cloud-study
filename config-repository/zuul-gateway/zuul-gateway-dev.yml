@@ -1,6 +1,6 @@
 spring:
   zipkin:
-    baseUrl: http://127.0.0.1:9411/
+    baseUrl: http://10.10.35.236:9411/
     sender:
       type: web
   sleuth:
