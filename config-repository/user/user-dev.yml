@@ -12,9 +12,9 @@ spring:
   datasource:
     druid:
       name: druid-dev
-      url: jdbc:mysql://10.10.35.236:3306/tcc2?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true&useOldAliasMetadataBehavior=true&serverTimezone=GMT
+      url: jdbc:mysql://10.10.35.236:3306/tcc2?useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true&useOldAliasMetadataBehavior=true&serverTimezone=Asia/Shanghai
       username: root
-      password: password
+      password: root
       driver-class-name: com.mysql.jdbc.Driver
       filters: stat
       max-active: 20
