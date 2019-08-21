@@ -7,12 +7,14 @@ spring:
     config:
       server:
         git:
+#          uri: https://github.com/meteor1993/SpringCloudLearning # git仓库的地址
+#          search-paths: chapter6/springcloud-config  # git仓库
           uri: https://github.com/MingmingYue/cloud-study
-          searchPaths: config-repository/{application}/
+          searchPaths: config-repository/order
           force-pull: true
-      #          username:
-      #          password:
-      label: master
+      #   username:
+      #   password:
+      #   label: master
 
 eureka:
   client:
