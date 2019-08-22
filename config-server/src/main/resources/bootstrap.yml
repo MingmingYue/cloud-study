@@ -10,7 +10,7 @@ spring:
 #          uri: https://github.com/meteor1993/SpringCloudLearning # git仓库的地址
 #          search-paths: chapter6/springcloud-config  # git仓库
           uri: https://github.com/MingmingYue/cloud-study
-          search-paths: configRepository/order
+          search-paths: chapter6/springcloud-config  # git仓库
           force-pull: true
 #          username:
 #          password:
