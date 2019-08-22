@@ -17,13 +17,13 @@ public class OrderServiceImpl implements OrderService {
 
     @Transactional
     public void increaseAmount(String acctId, double amount) {
-        this.jdbcTemplate.update("update tb_account_one set amount = amount - ? where acct_id = ?", amount, acctId);
+        this.jdbcTemplate.update("UPDATE tb_account_one SET amount = amount - ? WHERE acct_id = ?", amount, acctId);
         System.out.printf("undo increase: acct= %s, amount= %7.2f%n", acctId, amount);
     }
 
     @Transactional
     public void decreaseAmount(String acctId, double amount) {
-        this.jdbcTemplate.update("update tb_account_one set amount = amount + ? where acct_id = ?", amount, acctId);
+        this.jdbcTemplate.update("UPDATE tb_account_one SET amount = amount + ? WHERE acct_id = ?", amount, acctId);
         System.out.printf("undo decrease: acct= %s, amount= %7.2f%n", acctId, amount);
     }
 }
