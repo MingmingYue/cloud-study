@@ -5,3 +5,4 @@
 /disconf
 *.DS_Store
 /*.properties
+/bytetcc
